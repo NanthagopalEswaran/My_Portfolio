@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build && touch out/.nojekyll && gh-pages -d out -t true"
+    "deploy": "next build && node -e \"require('fs').closeSync(require('fs').openSync('out/.nojekyll', 'w'))\" && gh-pages -d out"
   },
   "dependencies": {
     "next": "16.0.0",
