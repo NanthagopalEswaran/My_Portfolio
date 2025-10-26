@@ -34,13 +34,13 @@ export default function Navigation() {
                             </Link>
                         ))}
                     </div>
-                    <button
+                    {/* <button
                         onClick={toggleTheme}
                         className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                         aria-label="Toggle theme"
                     >
                         <i className={`fas ${theme === 'light' ? 'fa-moon' : 'fa-sun'}`}></i>
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </nav>

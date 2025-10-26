@@ -1,38 +1,26 @@
+'use client'
+
 import Navigation from '@/components/Navigation'
 
 export default function Blogs() {
     const blogs = [
         {
-            title: 'Mastering React Hooks',
-            date: 'March 15, 2024',
-            description: 'A comprehensive guide to React Hooks and how to use them effectively in your applications.',
-            icon: 'fab fa-react',
+            title: 'Effective Use of GenAI in Applications',
+            date: 'Feb 23, 2025',
+            description: "GenAI isn’t here to replace traditional software entirely. Instead, it enhances existing software, adding a layer of intelligence that transforms it into something smarter and more capable. The key is knowing when to use GenAI and when to stick with traditional software. In this post, we’ll explore the strengths and weaknesses of both approaches and provide practical tips for integrating GenAI into your applications effectively.",
+            icon: null,
+            img: "medium.svg",
             gradient: 'from-blue-400 to-purple-500',
-            url: 'https://example.com/blog/react-hooks'
+            url: "https://medium.com/@nanthagopaleswaran/developer-insights-effective-use-of-genai-in-applications-59f80c554861"
         },
         {
-            title: 'Next.js Performance Tips',
-            date: 'March 10, 2024',
-            description: 'Optimize your Next.js applications for better performance and user experience.',
-            icon: 'fas fa-rocket',
-            gradient: 'from-green-400 to-blue-500',
-            url: 'https://example.com/blog/nextjs-performance'
-        },
-        {
-            title: 'CSS Grid Mastery',
-            date: 'March 5, 2024',
-            description: 'Learn advanced CSS Grid techniques to create complex layouts with ease.',
-            icon: 'fab fa-css3-alt',
-            gradient: 'from-purple-400 to-pink-500',
-            url: 'https://example.com/blog/css-grid'
-        },
-        {
-            title: 'Modern JavaScript Features',
-            date: 'February 28, 2024',
-            description: 'Explore the latest JavaScript features and how to use them in your projects.',
-            icon: 'fab fa-js-square',
-            gradient: 'from-yellow-400 to-orange-500',
-            url: 'https://example.com/blog/javascript-es6'
+            title: 'Exploring Different Types of Generative AI Applications',
+            date: 'Feb 23, 2025',
+            description: 'Let’s dive into the various types of GenAI applications.',
+            icon: null,
+            img: "medium.svg",
+            gradient: 'from-blue-400 to-purple-500',
+            url: 'https://medium.com/@nanthagopaleswaran/exploring-different-types-of-generative-ai-applications-1b9f5c8e8950'
         }
     ]
 
@@ -51,7 +39,11 @@ export default function Blogs() {
                             >
                                 <div className="flex items-center mb-4">
                                     <div className={`w-12 h-12 bg-gradient-to-br ${blog.gradient} rounded-lg flex items-center justify-center mr-4`}>
+                                        {blog.icon ? (
                                         <i className={`${blog.icon} text-white text-xl`}></i>
+                                    ) : blog.img ? (
+                                        <img src={blog.img} alt="icon" />
+                                    ) : null}
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{blog.title}</h3>

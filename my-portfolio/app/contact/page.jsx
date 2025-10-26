@@ -2,10 +2,11 @@ import Navigation from '@/components/Navigation'
 
 export default function Contact() {
     const socialLinks = [
-        { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/johndoe', color: 'from-blue-500 to-blue-700', name: 'LinkedIn' },
-        { icon: 'fab fa-github', url: 'https://github.com/johndoe', color: 'from-gray-700 to-gray-900', name: 'GitHub' },
-        { icon: 'fab fa-twitter', url: 'https://twitter.com/johndoe', color: 'from-blue-400 to-blue-600', name: 'Twitter' },
-        { icon: 'fas fa-envelope', url: 'mailto:john@example.com', color: 'from-red-500 to-red-700', name: 'Email' }
+        { icon: 'fab fa-linkedin', img: null, url: 'https://www.linkedin.com/in/nanthagopal-e-3abb34a6/', color: 'from-blue-500 to-blue-700', name: 'LinkedIn' },
+        { icon: 'fab fa-github', img: null, url: 'https://github.com/NanthagopalEswaran', color: 'from-gray-700 to-gray-900', name: 'GitHub' },
+        { icon: null, img: "hf-logo.svg", url: 'https://huggingface.co/NandyG', color: 'from-blue-400 to-blue-600', name: 'Hugging Face' },
+        { icon: null, img: "gmail.svg", url: 'mailto:nanthagopaleswaran@gmail.com', color: 'from-red-500 to-red-700', name: 'Gmail' },
+        { icon: null, img: "medium.svg", url: 'https://medium.com/@nanthagopaleswaran', color: 'from-red-500 to-red-700', name: 'Medium' }
     ]
 
     return (
@@ -27,7 +28,11 @@ export default function Contact() {
                                 className="card-3d bg-white dark:bg-gray-800 rounded-2xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform"
                             >
                                 <div className={`w-16 h-16 bg-gradient-to-br ${link.color} rounded-full flex items-center justify-center mb-4`}>
-                                    <i className={`${link.icon} text-white text-2xl`}></i>
+                                {link.icon ? (
+                                        <i className={`${link.icon} text-white text-2xl`}></i>
+                                    ) : link.img ? (
+                                        <img src={link.img} alt="icon" />
+                                    ) : null}
                                 </div>
                                 <span className="text-gray-900 dark:text-white font-medium">{link.name}</span>
                             </a>

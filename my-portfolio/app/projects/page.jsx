@@ -7,32 +7,7 @@ import ProjectModal from '@/components/ProjectModal'
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(null)
 
-    const projects = [
-        {
-            title: 'E-Commerce Platform',
-            description: 'Full-stack e-commerce solution with payment integration',
-            icon: 'fa-shopping-cart',
-            gradient: 'from-blue-400 to-purple-500',
-            tags: ['React', 'Node.js', 'MongoDB'],
-            details: 'A comprehensive e-commerce platform with user authentication, product management, shopping cart, and secure payment integration using Stripe.'
-        },
-        {
-            title: 'Task Management App',
-            description: 'Collaborative project management with real-time updates',
-            icon: 'fa-tasks',
-            gradient: 'from-green-400 to-blue-500',
-            tags: ['Vue.js', 'Firebase', 'Tailwind'],
-            details: 'Real-time collaborative task management application with drag-and-drop functionality, team collaboration features, and cloud synchronization.'
-        },
-        {
-            title: 'Weather Dashboard',
-            description: 'Beautiful weather app with location-based forecasts',
-            icon: 'fa-cloud-sun',
-            gradient: 'from-yellow-400 to-orange-500',
-            tags: ['React', 'API', 'Charts.js'],
-            details: 'Interactive weather dashboard featuring location-based forecasts, historical data visualization, and severe weather alerts.'
-        }
-    ]
+    const projects = []
 
     return (
         <>
@@ -61,6 +36,7 @@ export default function Projects() {
                                 </div>
                             </div>
                         ))}
+                        {projects.length == 0 ? <p className="text-xl font-semibold text-gray-900 dark:text-white mb-2  justify-center">Projects will be loaded soon. For now, Please explore my apps and blogs</p> : null}
                     </div>
                 </div>
             </main>
