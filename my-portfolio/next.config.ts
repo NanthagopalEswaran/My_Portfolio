@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
         unoptimized: true, // Required for static export
     },
     basePath: '/My_Portfolio', // Replace with YOUR repository name
-    assetPrefix: '/My_Portfolio/', // Replace with YOUR repository name
+    assetPrefix: './My_Portfolio/', // Replace with YOUR repository name
 };
 
 export default nextConfig;
